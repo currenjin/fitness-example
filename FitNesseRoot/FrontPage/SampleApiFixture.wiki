@@ -1,0 +1,17 @@
+---
+Test
+---
+!define TEST_SYSTEM {slim}
+
+!path /path/to/your/fixture.jar
+
+!|import                          |
+|com.example.demo.api.SampleApiFixture|
+
+!|script|SampleApiFixture|        |
+|check api response               |
+|request url|https://api.example.com/v1/resource|
+|method|GET                       |
+|check status|200                 |
+|check content type|application/json|
+|check body contains|{"key":"value"}|
