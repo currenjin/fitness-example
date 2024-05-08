@@ -1,0 +1,9 @@
+!define TEST_SYSTEM {slim}
+
+!path target/classes
+
+!|import|
+|com.currenjin.fitnesse.controller.*|
+
+|com.currenjin.fitnesse.controller.SampleApiFixture|
+|check response|/api/sample|200|Hello, World!|
